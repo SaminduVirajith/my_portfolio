@@ -1,0 +1,116 @@
+
+  .navbar {
+    display: flex;
+    background-color: #333;
+    padding: 10px 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 24px;
+  }
+  .logo span{
+    color: red;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  .nav-links a:hover {
+    color: #ADD8E6;
+  }
+  .nav-links a::before{
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);    
+    width: 0;
+    height: 3px;
+    background-color: #ADD8E6; 
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+.nav-links a:hover::before,
+.nav-links a.active::before{
+    width: 100%;
+    visibility: visible;
+}
+  .mobile-menu-icon {
+    display: none;
+  }
+  
+  .nav-links-mobile {
+    display: none;
+  }
+  #contact{
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  #contact:hover{
+    border: 2px solid transparent;
+    color: rgb(240, 118, 118);
+  }
+  @media screen and (max-width: 768px) {
+    .navbar{
+        margin: 0;
+    }
+    .nav-links {
+      display: none;
+    }
+  
+    .mobile-menu-icon {
+      display: block;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+  
+    .nav-links-mobile {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 100%;
+      height: calc(100vh - 50px);
+      background-color: #333;
+      z-index: 1;
+      text-align: center;
+      list-style: none;
+    }
+    .nav-links-mobile ul{
+        list-style: none !important;
+    }
+    .nav-links-mobile li {
+      margin: 20px 0;
+      text-decoration: none !important;
+    }
+  
+    .nav-links-mobile a {
+      font-size: 24px;
+      text-decoration: none; 
+      color: white;
+    }
+  }
+  
