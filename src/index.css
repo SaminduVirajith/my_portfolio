@@ -7,3 +7,13 @@
     background-attachment: fixed;
     color: white; 
 }
+.app{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+@media screen and (max-width: 768px) {
+    .app{
+        margin: 10px;
+    }
+    
+}
