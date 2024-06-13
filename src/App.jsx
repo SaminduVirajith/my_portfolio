@@ -1,6 +1,7 @@
 import React from "react"
 import Navbar from "./assets/components/navbar/Navbar"
 import Hero from "./assets/components/hero/Hero"
+import About from "./assets/components/about/About"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Hero />
+      <About />
     </div> 
     
   )

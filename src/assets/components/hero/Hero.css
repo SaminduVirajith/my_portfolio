@@ -1,12 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
 .hero{
-    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
     padding: 20px;
+    gap: 20px;
 }
+.hero-content {
+    animation: slideInFromLeft 1s forwards;
+    opacity: 0;
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+        background-color: transparent;
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 .hero-content span{
     color: #0ad0fc;
 }
+.hero-content .name{
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
 .hero-content h1{
     font-size: 50px;
+}
+.hero-content p{
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .hero-btn {
     display: flex;
@@ -14,10 +44,103 @@
 }
 .hero-btn .social{
     font-size: 50px;
+    border-radius: 50%;
     fill: #0ad0fc;
 }
-@media screen and (max-width: 768px){
+.hero-btn .social:hover{
+    border: 2px solid #0ad0fc;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 0 3px 3px #0ad0fc;
+}
+.cv{
+    margin-top: 40px;
+    border: 2px solid #0ad0fc;
+    background-color: #0ad0fc;
+    padding: 5px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+}
+.cv:hover{
+    box-shadow: 0 0 3px 3px #0ad0fc;
+    background-color: transparent;
+    color: #0ad0fc;
+}
+.hero-img {
+    animation: slideInFromRight 1s forwards;
+    opacity: 0; /* To ensure the element is hidden before animation starts */
+}
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+.hero-img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 5px #0ad0fc;
+    animation: floatimg 2s ease-in-out infinite;
+}
+.hero-img img:hover{
+    box-shadow: 0 0 8px 8px #0ad0fc;
+}
+@keyframes floatimg{
+    0%{
+        transform: translateY(10px);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
+@media screen and (max-width: 760px){
+    .hero-btn .social{
+        font-size: 40px;
+    }
     .hero-content h1{
         font-size: 35px;
+    }
+    .hero{
+        flex-direction: column;
+        margin-top: 80px;
+    }
+    .hero-img img{
+        margin-bottom: 50px;
+        width: 280px;
+        height: 280px;
+    }
+    .hero-content{
+        order: 2;
+    }
+    .cv{
+        padding: 5px 20px;
+    }
+}
+@media screen and (max-width: 600px){
+    .hero-content h1{
+        font-size: 30px;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 1024px){
+    .hero{
+        flex-direction: column;
+    }
+    .hero-img img{
+        margin-bottom: 50px;
+        width: 450px;
+        height: 450px;
+    }
+    .hero-content{
+        order: 2;
     }
 }

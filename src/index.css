@@ -3,9 +3,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f 0%, #23242a 50%, #191924 100%);
-    background-attachment: fixed;
     color: white; 
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(32, 33, 45);
 }
 .app{
     margin-left: 10%;
@@ -15,5 +17,4 @@
     .app{
         margin: 10px;
     }
-    
 }
