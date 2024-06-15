@@ -87,6 +87,7 @@
     color: black;
     opacity: 0;
     transition: opacity ease-in-out;
+    cursor: pointer;
 }
 .cv {
     animation: reveal-icon ease-in-out 4s; 
