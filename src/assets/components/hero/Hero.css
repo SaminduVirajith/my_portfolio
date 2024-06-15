@@ -12,6 +12,7 @@
     animation: slideInFromLeft 1s forwards;
     opacity: 0;
 }
+
 @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100px);
@@ -37,6 +38,7 @@
 .hero-content p{
     margin-top: 20px;
     margin-bottom: 30px;
+    line-height: 30px;
 }
 .hero-btn {
     display: flex;
@@ -44,8 +46,12 @@
 }
 .hero-btn .social{
     font-size: 50px;
+    border: 2px solid #0ad0fc;
+    padding: 5px;
     border-radius: 50%;
     fill: #0ad0fc;
+    opacity: 0;
+    transition: opacity ease-in-out;
 }
 .hero-btn .social:hover{
     border: 2px solid #0ad0fc;
@@ -53,6 +59,23 @@
     padding: 10px;
     box-shadow: 0 0 3px 3px #0ad0fc;
 }
+.hero-btn .social1 {
+    animation: reveal-icon ease-in 2s;
+    opacity: 1; 
+}
+.hero-btn .social2 {
+    animation: reveal-icon ease-in-out 2.5s; 
+    opacity: 1; 
+}
+.hero-btn .social3 {
+    animation: reveal-icon ease-in-out 3s; 
+    opacity: 1; 
+}
+.hero-btn .social4 {
+    animation: reveal-icon ease-in-out 3.5s; 
+    opacity: 1; 
+}
+
 .cv{
     margin-top: 40px;
     border: 2px solid #0ad0fc;
@@ -62,15 +85,24 @@
     font-weight: 700;
     font-size: 18px;
     color: black;
+    opacity: 0;
+    transition: opacity ease-in-out;
+}
+.cv {
+    animation: reveal-icon ease-in-out 4s; 
+    opacity: 1; 
 }
 .cv:hover{
     box-shadow: 0 0 3px 3px #0ad0fc;
     background-color: transparent;
     color: #0ad0fc;
 }
+@keyframes reveal-icon {
+    from { opacity: 0; }
+  }
 .hero-img {
-    animation: slideInFromRight 1s forwards;
-    opacity: 0; /* To ensure the element is hidden before animation starts */
+    animation: slideInFromRight 2s forwards;
+    opacity: 0; 
 }
   @keyframes slideInFromRight {
     0% {
@@ -112,7 +144,7 @@
     }
     .hero{
         flex-direction: column;
-        margin-top: 80px;
+        margin-top: 100px;
     }
     .hero-img img{
         margin-bottom: 50px;

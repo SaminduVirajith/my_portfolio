@@ -25,24 +25,13 @@ const Navbar = () => {
         <li>
           <Link
             activeClass='active'
-            to='about' smooth={true}
-            offset={-100} 
+            to='about' 
+            smooth={true}
+            offset={-300} 
             duration={100} 
             spy={true}
           >
             About Me
-          </Link>
-        </li>
-        <li>
-          <Link 
-            activeClass='active' 
-            to='project' 
-            smooth={true} 
-            offset={-200} 
-            duration={100} 
-            spy={true}
-          >
-          LinkProjects
           </Link>
         </li>
         <li>
@@ -57,8 +46,20 @@ const Navbar = () => {
             Skills
           </Link>
         </li>
+        <li>
+          <Link 
+            activeClass='active' 
+            to='project' 
+            smooth={true} 
+            offset={-200} 
+            duration={100} 
+            spy={true}
+          >
+            Projects
+          </Link>
+        </li>
       </ul>
-      <Link href="/contact" id='contact'>Contact me</Link>
+      <Link to="contact" id='contact'>Contact me</Link>
       <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
         {isMobile ? <FaTimes /> : <FaBars />}
       </button>

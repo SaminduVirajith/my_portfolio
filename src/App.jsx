@@ -2,6 +2,7 @@ import React from "react"
 import Navbar from "./assets/components/navbar/Navbar"
 import Hero from "./assets/components/hero/Hero"
 import About from "./assets/components/about/About"
+import Skill from "./assets/components/skill/Skill"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Hero />
       <About />
+      <Skill />
     </div> 
     
   )
