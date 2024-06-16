@@ -8,6 +8,9 @@
     font-style: normal;
     font-weight: bold;
     font-size: 50px;
+}
+.skill-heading,
+.Skill-content h2{
     background: linear-gradient(90deg, #0051ff, #0ad0fc, #ffffff);
     background-clip: text;
     -webkit-text-fill-color: transparent;

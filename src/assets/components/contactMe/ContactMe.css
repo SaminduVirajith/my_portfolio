@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+#contactme .contact-title{
+    margin-top: 60px;
+    text-align: center;
+    font-family: "Kaushan Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    background: linear-gradient(90deg, #0051ff, #0ad0fc, #ffffff);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#contactme section{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 50px;
+}
+section .contact-text,
+section .contact-form{
+    justify-content: center;
+    padding: 20px;
+    width: 50%;
+}

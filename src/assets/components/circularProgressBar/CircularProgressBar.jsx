@@ -1,4 +1,3 @@
-// CircularProgressBar.js
 import React, { useEffect, useState } from 'react';
 
 const CircularProgressBar = ({ progress, size = 100, strokeWidth = 10 }) => {
@@ -48,8 +47,8 @@ const CircularProgressBar = ({ progress, size = 100, strokeWidth = 10 }) => {
       />
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="rgba(58, 123, 213, 1)" />
-          <stop offset="100%" stopColor="rgba(0, 210, 255, 1)" />
+          <stop offset="0%" stopColor="rgba(0, 210, 255, 1)" />
+          <stop offset="100%" stopColor="rgba(58, 123, 213, 1)" />
         </linearGradient>
       </defs>
       <text

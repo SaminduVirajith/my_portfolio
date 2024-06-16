@@ -59,9 +59,21 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <Link to="contact" id='contact'>Contact me</Link>
-      <button className="mobile-menu-icon" onClick={() => setIsMobile(!isMobile)}>
-        {isMobile ? <FaTimes /> : <FaBars />}
+      <Link 
+          id='contact' 
+          to='contactme' 
+          smooth={true} 
+          offset={-200} 
+          duration={100} 
+          spy={true}
+      >
+        Contact me
+      </Link>
+      <button 
+        className="mobile-menu-icon" 
+          onClick = {() => 
+            setIsMobile(!isMobile)}>
+              {isMobile ? <FaTimes /> : <FaBars />}
       </button>
     </nav>
   );
