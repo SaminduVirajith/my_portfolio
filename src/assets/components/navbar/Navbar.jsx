@@ -58,6 +58,18 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
+        <li>
+          <Link
+            className='cont'
+            to='contactme' 
+            smooth={true} 
+            offset={-200} 
+            duration={100} 
+            spy={true}
+          >
+            Contact Me
+          </Link>
+        </li>
       </ul>
       <Link 
           id='contact' 

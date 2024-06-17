@@ -28,6 +28,7 @@
 .logo {
   color: white;
   font-size: 24px;
+  margin-right: 50px;
 }
 .logo span{
   color: red;
@@ -96,13 +97,17 @@
   border: 2px solid #0ad0fc;
   color: #0ad0fc;
 }
-@media screen and (max-width: 768px) {
+.cont{
+  display: none;
+}
+@media screen and (max-width: 920px) {
   .navbar{
       width: 100%;
       top: 0px;
   }
   .logo {
     z-index: 1001;
+    margin-right: 0;
   }
   .nav-links {
     display: none;
@@ -145,8 +150,25 @@
     color: white;
   }
 }
-@media screen and (min-width: 819px) and (max-width: 859px){
-  #contact{
-    display: none;
+@media screen and (max-width: 920px){
+  .cont{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 5px 10px ;
+    margin-top: 20px;
+    border: 2px solid red;
+    border-radius: 10px;
+  }
+}
+/* @media screen and (width: 820px){
+  .mobile-menu-icon{
+    margin-right: 100px;
+  }
+} */
+@media screen and (min-width: 820px)and (max-width: 920px){
+  .mobile-menu-icon{
+    margin-right: 100px;
   }
 }
