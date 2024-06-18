@@ -10,25 +10,24 @@ const ContactMe = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [comment, setComment] = useState("");
+  const [formMessage, setFormMessage] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    setComment("");
-    setName("");
-    setSubject("");
-    setEmail("");
+    if (name && email && subject && comment) {
+      setFormMessage("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setSubject("");
+      setComment("");
+    }
+    setTimeout(() => {
+      setFormMessage("");
+    }, 5000);
   }
 
-  const submitForm = (e) => {
-    if (!comment || !name || !subject || !email) {
-      alert("Pleace fill the all field");
-    }
-    else {
-      alert("Form Submited!");
-    }
-  }
-
+ 
   return (
     <div id='contactme'>
       <h1 className='contact-title'>Contact Me</h1>
@@ -100,10 +99,11 @@ const ContactMe = () => {
                 setComment(event.target.value)
               }
             />
-            <button type='submit'
-              onClick={submitForm}
-            >Send Message</button>
+            <button type='submit'>
+              Send Message
+            </button>
           </form>
+          {formMessage && <p className='formMessage'>{formMessage}</p>}
         </motion.div>
       </section>
     </div>
