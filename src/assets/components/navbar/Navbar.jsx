@@ -15,7 +15,7 @@ const Navbar = () => {
             activeClass='active'
             to='hero'
             smooth={true}
-            offset={-200}
+            offset={-150}
             duration={100}
             spy={true}
           >
@@ -27,7 +27,7 @@ const Navbar = () => {
             activeClass='active'
             to='about' 
             smooth={true}
-            offset={-300} 
+            offset={-200} 
             duration={100} 
             spy={true}
           >
@@ -39,7 +39,7 @@ const Navbar = () => {
             activeClass='active' 
             to='skill' 
             smooth={true} 
-            offset={-200} 
+            offset={-100} 
             duration={100} 
             spy={true}
           >
@@ -51,7 +51,7 @@ const Navbar = () => {
             activeClass='active' 
             to='project' 
             smooth={true} 
-            offset={-200} 
+            offset={-100} 
             duration={100} 
             spy={true}
           >
@@ -63,7 +63,7 @@ const Navbar = () => {
             className='cont'
             to='contactme' 
             smooth={true} 
-            offset={-200} 
+            offset={-100} 
             duration={100} 
             spy={true}
           >
@@ -75,7 +75,7 @@ const Navbar = () => {
           id='contact' 
           to='contactme' 
           smooth={true} 
-          offset={-200} 
+          offset={-100} 
           duration={100} 
           spy={true}
       >

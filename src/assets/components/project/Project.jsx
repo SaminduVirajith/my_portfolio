@@ -3,17 +3,23 @@ import './Project.css'
 import hms from '../../images/hms.png'
 import bakery from '../../images/bakery.png'
 import portfolio from '../../images/portfolio.png'
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io"
+import { motion } from 'framer-motion'
+import { fadeInn } from '../../variants/variants'
 
 const Project = () => {
   return (
 
-    <div className='project'>
+    <div className='project' id='projects'>
       <h1>Latest Projects</h1>
       <div className="container">
-        <a href=""
-           target='_blank'
-           rel="noopener noreferrer"
+        <motion.a 
+          href=""
+          target='_blank'
+          rel="noopener noreferrer"
+          variants={fadeInn('up')}
+          initial='hidden'
+          whileInView={'show'}
         >
           <div className="project-content">
             <img src={hms} loading='lazy' />
@@ -23,10 +29,14 @@ const Project = () => {
               <p>Check out my Github Account for more details</p>
             </div>
           </div>
-        </a>
-        <a href="https://github.com/SaminduVirajith/BreezyBite_Bakery"
-           target='_blank'
-           rel="noopener noreferrer"
+        </motion.a>
+        <motion.a 
+          href="https://github.com/SaminduVirajith/BreezyBite_Bakery"
+          target='_blank'
+          rel="noopener noreferrer"
+          variants={fadeInn('down')}
+          initial='hidden'
+          whileInView={'show'}
         >
           <div className="project-content">
             <img src={bakery} loading='lazy' />
@@ -36,10 +46,14 @@ const Project = () => {
               <p>Check out my Github Account for more details</p>
             </div>
           </div>
-        </a>
-        <a href=""
-           target='_blank'
-           rel="noopener noreferrer"
+        </motion.a>
+        <motion.a 
+          href=""
+          target='_blank'
+          rel="noopener noreferrer"
+          variants={fadeInn('up')}
+          initial='hidden'
+          whileInView={'show'}
         >
           <div className="project-content">
             <img src={portfolio} loading='lazy' />
@@ -49,7 +63,7 @@ const Project = () => {
               <p>Check out my Github Account for more details</p>
             </div>
           </div>
-        </a>
+        </motion.a>
       </div>
     </div>
   )
