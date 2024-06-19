@@ -6,28 +6,47 @@ import { fadeInn } from '../../variants/variants'
 
 const ContactMe = () => {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
-  const [comment, setComment] = useState("");
   const [formMessage, setFormMessage] = useState("");
+  const [data, setData] = useState({
+    name : "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  const {name, email, subject, message} = data
 
-    if (name && email && subject && comment) {
+  const handleChange = (e) =>{
+    setData({...data, [e.target.name]: e.target.value});
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch (
+        "https://v1.nocodeapi.com/samindu/google_sheets/IgMojZAJpgOxNyEF?tabId=Sheet1",
+        {
+          method: 'POST',
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify([
+            [name, email, subject, message, new Date().toLocaleString()],
+          ]),
+        }
+      );
+      await response.json()
+      setData({...data, name: "", email: "", subject: "", message: ""})
       setFormMessage("Message sent successfully!");
-      setName("");
-      setEmail("");
-      setSubject("");
-      setComment("");
+    } catch (error) {
+      console.log(error)
     }
     setTimeout(() => {
       setFormMessage("");
     }, 5000);
-  }
+  };
 
- 
   return (
     <div id='contactme'>
       <h1 className='contact-title'>Contact Me</h1>
@@ -64,10 +83,8 @@ const ContactMe = () => {
               placeholder='Full Name'
               required
               value={name}
-              onChange={event =>
-                setName(event.target.value)
-              }
-
+              name='name'
+              onChange={handleChange}
             />
             <br />
             <input
@@ -75,9 +92,8 @@ const ContactMe = () => {
               placeholder='Email'
               required
               value={email}
-              onChange={event =>
-                setEmail(event.target.value)
-              }
+              name='email'
+              onChange={handleChange}
             />
             <br />
             <input
@@ -85,19 +101,16 @@ const ContactMe = () => {
               placeholder='Subject'
               required
               value={subject}
-              onChange={event =>
-                setSubject(event.target.value)
-              }
+              name='subject'
+              onChange={handleChange}
             />
             <br />
             <textarea
-              value={comment}
+              value={message}
               required
               placeholder='Type your message here .........'
-              raws="10"
-              onChange={event =>
-                setComment(event.target.value)
-              }
+              name='message'
+              onChange={handleChange}
             />
             <button type='submit'>
               Send Message

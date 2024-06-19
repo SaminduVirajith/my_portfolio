@@ -103,4 +103,8 @@ textarea::placeholder{
     section .contact-text h1{
         font-size: 40px;
     }
+    .formMessage{
+        text-align: center;
+        margin-top: 20px;
+    }
 }
