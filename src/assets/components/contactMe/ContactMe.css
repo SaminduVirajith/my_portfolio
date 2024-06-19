@@ -83,6 +83,7 @@ textarea::placeholder{
     border: 2px solid green;
     color: black;
     font-weight: 700;
+    cursor: pointer;
 }
 .contact-form button:hover{
     box-shadow: 0 0 2px 2px rgb(0, 255, 0);

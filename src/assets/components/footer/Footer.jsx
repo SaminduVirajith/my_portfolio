@@ -10,11 +10,11 @@ import linkedin from '../../images/linkedin.png'
 const Footer = () => {
     return (
         <div className='footer'>
-             <hr />
+            <hr />
             <div className="footer-content">
                 <section className='footer-about'>
-                <h3>About Me</h3>
-                <p>Hi, I'm Samindu Virajith Bandara from Sri Lanka, a passionate web developer and designer. I create beautiful, responsive websites and intuitive user experiences. Let's build something amazing together!</p>
+                    <h3>About Me</h3>
+                    <p>Hi, I'm Samindu Virajith Bandara from Sri Lanka, a passionate web developer and designer. I create beautiful, responsive websites and intuitive user experiences. Let's build something amazing together!</p>
                 </section>
                 <section className='footer-links'>
                     <h3>Quick Links</h3>
@@ -25,31 +25,35 @@ const Footer = () => {
                 </section>
                 <section className='footer-contact'>
                     <h3>Contact</h3>
-                    <p> <IoIosMail style={{fontSize: '20px'}} className='footer-contact-icon'/> Email - samidu.virajith@gmail.com</p>
-                    <p> <FaPhoneVolume className='footer-contact-icon'/> Phone - 077-1785752</p>
-                    <p> <FaLocationDot className='footer-contact-icon'/> Location - No: 252/1 Yatihalagala, Pallegama, Halloluwa</p>
+                    <p> <IoIosMail style={{ fontSize: '20px' }} className='footer-contact-icon' /> Email - samidu.virajith@gmail.com</p>
+                    <p> <FaPhoneVolume className='footer-contact-icon' /> Phone - 077-1785752</p>
+                    <p> <FaLocationDot className='footer-contact-icon' /> Location - No: 252/1 Yatihalagala, Pallegama, Halloluwa</p>
                 </section>
                 <section className='footer-social'>
                     <h3>Connect with Me</h3>
-                    <a 
-                        href=''
+                    <a
+                        href='https://web.facebook.com/samidu.samidu.5817'
                         target='_blank'
                         rel="noopener noreferrer"
                     >
-                       
-                            <img src={facebook} alt="" />
+
+                        <img src={facebook} alt="" />
                     </a>
-                    <a 
+                    <a
                         href="https://github.com/SaminduVirajith"
                         target='_blank'
                         rel="noopener noreferrer"
                     >
-                            <img src={github} alt="" />
+                        <img src={github} alt="" />
                     </a>
-                    <a href="">
+                    <a
+                        href="https://www.instagram.com/samiduvirajith/"
+                        target='_blank'
+                        rel="noopener noreferrer"
+                    >
                         <img src={intergram} alt="" />
                     </a>
-                    <a 
+                    <a
                         href="https://www.linkedin.com/in/samindu-virajith-943070270/"
                         target='_blank'
                         rel="noopener noreferrer"
@@ -59,8 +63,8 @@ const Footer = () => {
                 </section>
             </div>
 
-                <p className="copyright">All Right Reserved | Copyright 2024 | Web Solution by SVB</p>
-    
+            <p className="copyright">All Right Reserved | Copyright 2024 | Web Solution by SVB</p>
+
         </div>
     )
 }

@@ -50,14 +50,14 @@ const Hero = () => {
               <BsLinkedin className='social social2' />
             </a>
             <a
-              href=""
+              href="https://web.facebook.com/samidu.samidu.5817"
               target='_blank'
               rel="noopener noreferrer"
             >
               <FaFacebook className='social social3' />
             </a>
             <a
-              href=""
+              href="https://www.instagram.com/samiduvirajith/"
               target='_blank'
               rel="noopener noreferrer"
             >

@@ -8,23 +8,23 @@ const ContactMe = () => {
 
   const [formMessage, setFormMessage] = useState("");
   const [data, setData] = useState({
-    name : "",
+    name: "",
     email: "",
     subject: "",
     message: "",
   });
 
-  const {name, email, subject, message} = data
+  const { name, email, subject, message } = data
 
-  const handleChange = (e) =>{
-    setData({...data, [e.target.name]: e.target.value});
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch (
+      const response = await fetch(
         "https://v1.nocodeapi.com/samindu/google_sheets/IgMojZAJpgOxNyEF?tabId=Sheet1",
         {
           method: 'POST',
@@ -37,10 +37,11 @@ const ContactMe = () => {
         }
       );
       await response.json()
-      setData({...data, name: "", email: "", subject: "", message: ""})
+      setData({ ...data, name: "", email: "", subject: "", message: "" })
       setFormMessage("Message sent successfully!");
+
     } catch (error) {
-      console.log(error)
+      alert(error);
     }
     setTimeout(() => {
       setFormMessage("");
@@ -112,7 +113,9 @@ const ContactMe = () => {
               name='message'
               onChange={handleChange}
             />
-            <button type='submit'>
+            <button 
+              type='submit'
+            >
               Send Message
             </button>
           </form>

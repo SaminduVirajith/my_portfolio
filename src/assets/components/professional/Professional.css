@@ -1,12 +1,4 @@
-/* .professional{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-.single-circle{
-    margin-right: 10px;
-    margin-left: 50px;
-} */
+
 .professional{
     display: flex;
     justify-content: space-evenly;
