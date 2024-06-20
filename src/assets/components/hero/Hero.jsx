@@ -21,7 +21,7 @@ const Hero = () => {
             <span style={{ color: 'red', fontWeight: 'bold' }}>
               <Typewriter
                 words={['Web Designer.', 'Web Developer.']}
-                loop={1}
+                loop={true}
                 cursor
                 cursorStyle='|'
                 typeSpeed={100}
