@@ -59,6 +59,10 @@ textarea{
     padding: 10px;
     font-size: 15px;
 }
+.contact-form input:focus,
+textarea:focus{
+    outline: 1px solid #0ad0fc;
+}
 .contact-form h2{
     text-align: center;
 }
