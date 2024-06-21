@@ -97,3 +97,10 @@
         margin-bottom: 10px;
     }
 }
+@media screen and (width: 1024px){
+    .footer-content .footer-social .footer-social-i{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+}

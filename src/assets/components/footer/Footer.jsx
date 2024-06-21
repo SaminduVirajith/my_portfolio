@@ -31,40 +31,40 @@ const Footer = () => {
                 </section>
                 <section className='footer-social'>
                     <h3>Connect with Me</h3>
-                    <a
-                        href='https://web.facebook.com/samidu.samidu.5817'
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
+                    <div className='footer-social-i'>
+                        <a
+                            href='https://web.facebook.com/samidu.samidu.5817'
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
 
-                        <img src={facebook} alt="" />
-                    </a>
-                    <a
-                        href="https://github.com/SaminduVirajith"
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
-                        <img src={github} alt="" />
-                    </a>
-                    <a
-                        href="https://www.instagram.com/samiduvirajith/"
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
-                        <img src={intergram} alt="" />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/samindu-virajith-943070270/"
-                        target='_blank'
-                        rel="noopener noreferrer"
-                    >
-                        <img src={linkedin} alt="" />
-                    </a>
+                            <img src={facebook} alt="" />
+                        </a>
+                        <a
+                            href="https://github.com/SaminduVirajith"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
+                            <img src={github} alt="" />
+                        </a>
+                        <a
+                            href="https://www.instagram.com/samiduvirajith/"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
+                            <img src={intergram} alt="" />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/samindu-virajith-943070270/"
+                            target='_blank'
+                            rel="noopener noreferrer"
+                        >
+                            <img src={linkedin} alt="" />
+                        </a>
+                    </div>
                 </section>
             </div>
-
             <p className="copyright">All Right Reserved | Copyright 2024 | Web Solution by SVB</p>
-
         </div>
     )
 }
