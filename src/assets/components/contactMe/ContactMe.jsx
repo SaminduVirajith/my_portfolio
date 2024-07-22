@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './ContactMe.css'
 import { IoIosMail } from "react-icons/io"
 import { motion } from 'framer-motion'
