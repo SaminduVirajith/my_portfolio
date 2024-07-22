@@ -14,7 +14,7 @@ const Project = () => {
       <h1>Latest Projects</h1>
       <div className="container">
         <motion.a 
-          href=""
+          href="https://github.com/SaminduVirajith/hotel_ms"
           target='_blank'
           rel="noopener noreferrer"
           variants={fadeInn('up')}
@@ -48,7 +48,7 @@ const Project = () => {
           </div>
         </motion.a>
         <motion.a 
-          href=""
+          href="https://github.com/SaminduVirajith/my_portfolio"
           target='_blank'
           rel="noopener noreferrer"
           variants={fadeInn('up')}
