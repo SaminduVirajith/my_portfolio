@@ -64,7 +64,7 @@ const Footer = () => {
                     </div>
                 </section>
             </div>
-            <p className="copyright">All Right Reserved | Copyright 2024 | Web Solution by SVB</p>
+            <p className="copyright">All Right Reserved | Copyright 2025 | Web Solution by SVB</p>
         </div>
     )
 }
